@@ -1,0 +1,58 @@
+# -------------------------------------------------
+# Hugo + Logseq Combined .gitignore
+# -------------------------------------------------
+
+# ========== Hugo ==========
+# Build output and generated resources
+/public/
+/resources/
+.hugo_build.lock
+hugo_stats.json
+
+# Hugo executables (optional)
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# Temporary and cache files
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# VSCode or JetBrains project metadata
+.vscode/
+.idea/
+
+# -------------------------------------------------
+# ========== Logseq ==========
+# Logseq local database and backup system
+/logseq/db/
+/logseq/bak/
+/logseq/plugins/
+/logseq/config/
+
+# Ignore Logseq preview/temp files (backup extensions)
+*.md.20*
+*.edn.20*
+*.js.20*
+*.css.20*
+
+# -------------------------------------------------
+# ========== Node / build ==========
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -------------------------------------------------
+# ========== OS/system hidden files ==========
+.DS_Store
+Thumbs.db
+
+# -------------------------------------------------
+# Optional: if your Hugo site is generated from Logseq exports
+# You can safely ignore exported zips and temporary build folders
+*.zip
+*.tar.gz

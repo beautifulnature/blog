@@ -1,0 +1,52 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+copyright = "John Doe (CC BY 4.0)"
+defaultContentLanguage = "en"
+
+# Generate a nice robots.txt for SEO
+enableRobotsTXT = true
+
+[markup]
+  [markup.highlight]
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = false
+
+[languages]
+  [languages.en]
+    title = "Bear Cub"
+    languageName = "en-US 🇺🇸"
+    LanguageCode = "en-US"
+    contentDir = "content"
+    [languages.en.params]
+      madeWith = "Made with [Bear Cub](https://github.com/clente/hugo-bearcub)"
+  # [languages.pt]
+  #   title = "Bear Cub"
+  #   languageName = "pt-BR 🇧🇷"
+  #   LanguageCode = "pt-BR"
+  #   contentDir = "content.pt"
+  #   [languages.pt.params]
+  #     madeWith = "Feito com [Bear Cub](https://github.com/clente/hugo-bearcub)"
+
+[params]
+  description = "Bear Cub Demo"
+  favicon = "images/favicon.png"
+  images = ["images/share.webp"]
+  title = "Bear Cub"
+  dateFormat = "2006-01-02"
+  hideUntranslated = false
+  themeStyle = "original"
+  generateSocialCard = true
+
+  [params.social]
+    twitter = "example"
+    facebook_admin = "0000000000"
+
+  [params.author]
+    name = "John Doe"
+    email = "me@example.com"
+
+[module]
+  [[module.imports]]
+    path = "github.com/clente/hugo-bearcub"
