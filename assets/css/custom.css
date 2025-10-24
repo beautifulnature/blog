@@ -1,0 +1,17 @@
+.search-bar input[type="text"] {
+  backdrop-filter: blur(6px);
+  background-color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 50px 0 0 50px;
+}
+
+@media (max-width: 600px) {
+  .search-bar input[type="text"] {
+    width: 70%;
+    font-size: 0.9rem;
+  }
+  .search-bar button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

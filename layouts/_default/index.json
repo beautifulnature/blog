@@ -1,0 +1,12 @@
+{{- $index := slice -}}
+{{- range $.Site.RegularPages -}}
+  {{- $tags := slice -}}
+  {{- range .Params.tags -}}
+    {{- $tags = $tags | append . -}}
+  {{- end -}}
+  {{- $content := .Content | plainify | htmlUnescape -}}
+  {{- $datestr := .Date.Format "Jan 2, 2006" -}}
+  {{- $indexItem := dict "url" .Permalink "title" .Title "content" $content "tags" $tags "date" $datestr -}}
+  {{- $index = $index | append $indexItem -}}
+{{- end -}}
+{{- $index | jsonify (dict "indent" " ") -}}
